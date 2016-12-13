@@ -13,8 +13,8 @@ public class Main {
 		String tree1Str4 = "a(b(c d) e(f g(h)))";
 		// Distance: 1
 
-		String tree1Str5 = "d";
-		String tree1Str6 = "g(h)";
+		String tree1Str5 = "a(b c)";
+		String tree1Str6 = "g(b h)";
 		// Distance: 2
 
 		Tree tree1 = new Tree(tree1Str1);
@@ -26,13 +26,24 @@ public class Main {
 		Tree tree5 = new Tree(tree1Str5);
 		Tree tree6 = new Tree(tree1Str6);
 
-		int distance1 = Tree.ZhangShasha(tree1, tree2);
-		System.out.println("Expected 2; got " + distance1);
+		//int distance1 = Tree.ZhangShasha(tree1, tree2);
+		//System.out.println("Expected 2; got " + distance1);
+		
+		//System.out.println(tree1.labels);
 
-		int distance2 = Tree.ZhangShasha(tree3, tree4);
-		System.out.println("Expected 1; got " + distance2);
+		//int distance2 = Tree.ZhangShasha(tree3, tree4);
+		//System.out.println("Expected 1; got " + distance2);
 
-		int distance3 = Tree.ZhangShasha(tree5, tree6);
-		System.out.println("Expected 2; got " + distance3);
+		//int distance3 = Tree.ZhangShasha(tree5, tree6);
+		//System.out.println("Expected 2; got " + distance3);
+		
+		//// PARALLEL STUFF ////
+		
+		TreeParallel ptree1 = new TreeParallel(tree1Str5);
+		TreeParallel ptree2 = new TreeParallel(tree1Str6);
+		
+		int pdistance1 = TreeParallel.ZhangShasha(ptree1, ptree2);
+		System.out.println("Expected 2; got " + pdistance1);
+		
 	}
 }

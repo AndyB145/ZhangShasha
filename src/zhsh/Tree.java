@@ -23,6 +23,12 @@ public class Tree {
 			throw new RuntimeException("Leftover token: " + tokenizer.ttype);
 		}
 	}
+	
+	// Constructor for creating custom trees 
+	public Tree(Node root){
+		this.root = root;
+	}
+
 
 	private static Node parseString(Node node, StreamTokenizer tokenizer) throws IOException {
 		node.label = tokenizer.sval;
@@ -53,6 +59,7 @@ public class Tree {
 	public void index() {
 		// index each node in the tree according to traversal method
 		index(root, 0);
+		
 	}
 
 	private static int index(Node node, int index) {
@@ -61,6 +68,7 @@ public class Tree {
 		}
 		index++;
 		node.index = index;
+		System.out.println("Index of " + node + " is: " + index);
 		return index;
 	}
 

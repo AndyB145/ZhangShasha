@@ -16,4 +16,8 @@ public class Node {
 	public Node(String label) {
 		this.label = label;
 	}
+	
+	public String toString(){
+		return label;
+	}
 }
