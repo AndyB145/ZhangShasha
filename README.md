@@ -1,6 +1,17 @@
-ZhangShasha
+Tree comparison algroithm (ZhangShasha) applied to glycans
 ===========
+The tree comparison algorithm has been applied to glycans to generate similarity scores that will ultimately be used to rank search 
+results. This implementation includes a parser to read GlycoCTCondensed formated files and feed the structure data to the comparison 
+code. 
 
+Parallel Implementation
+===============
+I have implemented the parallel version that was described in the original Zhang & Shasha paper to help handle large structure 
+comparisons in more reasonable time. 
+
+
+Original Readme
+========
 The Zhang-Shasha algorithm calculates the edit distance between trees by counting the minimum number of node insertions,
 deletions, and relabelings needed to transform one tree into another. The idea is similar to the edit-distance between strings and, 
 in fact, edit-distance between strings is a special-case of this algorithm. In calculating the edit-distance between strings, 
