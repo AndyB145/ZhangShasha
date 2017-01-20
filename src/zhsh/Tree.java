@@ -68,7 +68,7 @@ public class Tree {
 		}
 		index++;
 		node.index = index;
-		System.out.println("Index of " + node + " is: " + index);
+		//System.out.println("Index of " + node + " is: " + index);
 		return index;
 	}
 
